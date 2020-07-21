@@ -9,7 +9,7 @@
     <body onload="openCamera();">
             氏名<input type ="text"></br>
             金額<input type ="text">
-            <div class="overlay"></div>
+            <div class="overlay">　　　　　　　　　　　　枠に合わせてください</div>
             <div class="camera_box">
                 <video autoplay playsinline></video>
             </div>
@@ -27,8 +27,22 @@
     </script>
     <style>
     .div-relative{position:relative; color:#000; border:1px solid #000; width:500px; height:400px}
-    .camera_box{ position:absolute; left:0px; top:90px; width:400px; height:200px; z-index:1}
-    .overlay{ position:absolute; left:120px; top:180px; width:500px; height:1000px; z-index:999; border-style:dashed;border-width:medium;}
+    .div-a{ position:absolute; left:30px; top:30px; background:#F00; width:200px; height:100px}
+    /* css注释说明： 背景为红色 */
+    .camera_box{ position:absolute; left:50px; top:100px; background:#FF0; width:400px; height:200px; z-index:1}
+    /* 背景为黄色 */
+    .overlay{ position:absolute; left:120px; top:180px; background:#00F; width:500px; height:1000px; z-index:999; background: linear-gradient((to left, #f00, #f00) left top no-repeat,
+		    linear-gradient((to bottom, #f00, #f00) left top no-repeat,
+		    linear-gradient((to left, #f00, #f00) right top no-repeat,
+            linear-gradient((to bottom, #f00, #f00) right top no-repeat,
+            linear-gradient((to left, #f00, #f00) left bottom no-repeat,
+            linear-gradient((to bottom, #f00, #f00) left bottom no-repeat,
+            linear-gradient((to left, #f00, #f00) right bottom no-repeat,
+            linear-gradient((to left, #f00, #f00) right bottom no-repeat,
+            background-size: 1px 20px, 20px 1px, 1px 20px, 20px 1px;}
+    /* DIV背景颜色为蓝色 */
     </style>
 </html>
+
+
 
