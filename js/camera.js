@@ -24,18 +24,21 @@ function openCamera() {
 }
 
 function shot(){
-    var video = document.querySelector('video');
-    var canvas = document.createElement('canvas');
-    alert("1")
-    //canvas.width = width;
-    //canvas.height = height;
-    //alert("width" + canvas.width);
-    //alert("height" + canvas.height);
-    var context = canvas.getContext('2d');
-    alert("context done")
-    context.drawImage(video, 0, 0, 300, 300);
-    alert("dramcanvas done")
-    var img = new Image();
-    img.src = canvas.toDataURL('image/png');
-    alert("done");
+    try{
+        var video = document.querySelector('video');
+        var canvas = document.createElement('canvas');
+        //canvas.width = width;
+        //canvas.height = height;
+        //alert("width" + canvas.width);
+        //alert("height" + canvas.height);
+        var context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, 300, 300);
+        alert("dramcanvas done")
+        var img = new Image();
+        img.src = canvas.toDataURL('image/png');
+        alert("done");
+    }
+    catch(err) {
+    alert(err.message);
+    }
 }
