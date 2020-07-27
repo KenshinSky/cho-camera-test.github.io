@@ -27,16 +27,16 @@ function shot(){
     try{
         var video = document.querySelector('video');
         var canvas = document.createElement('canvas');
-        //canvas.width = width;
-        //canvas.height = height;
-        //alert("width" + canvas.width);
-        //alert("height" + canvas.height);
+        var width = video.offsetWidth;
+        var height = video.offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
+        alert("video width:" + canvas.width + "</br>video height:" + canvas.height);
         var context = canvas.getContext('2d');
-        context.drawImage(video, 0, 0, 300, 300);
-        alert("dramcanvas done")
+        context.drawImage(video, 0, 0, width, height);
         var img = new Image();
         img.src = canvas.toDataURL('image/png');
-        alert("done");
+        alert("img width:" + img.width + "</br>img height:" + img.height);
     }
     catch(err) {
     alert(err.message);
