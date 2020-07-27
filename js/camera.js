@@ -22,3 +22,10 @@ function openCamera() {
             console.log(err);
         });
 }
+
+function shot(){
+    var video = document.querySelector('video');
+    canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+    var img = canvas.toDataURL("image/png");
+    alert("done");
+}
