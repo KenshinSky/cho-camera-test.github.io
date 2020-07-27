@@ -24,8 +24,11 @@ function openCamera() {
 }
 
 function shot(){
+    alert("1");
     var video = document.querySelector('video');
+    alert("2");
     canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+    alert("3");
     var img = canvas.toDataURL("image/png");
     alert("done");
 }
