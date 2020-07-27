@@ -34,8 +34,9 @@ function shot(){
         alert("video width:" + canvas.width + "\nvideo height:" + canvas.height);
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, width, height);
-        var img = canvas.toDataURL('image/png');
-        alert("img width:" + img.width + "\nimg height:" + img.height);
+        //var img = canvas.toDataURL('image/png');
+        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+        alert("img width:" + image.width + "\nimg height:" + image.height);
     }
     catch(err) {
     alert(err.message);
