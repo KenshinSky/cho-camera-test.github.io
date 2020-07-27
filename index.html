@@ -8,7 +8,8 @@
 
     <body onload="openCamera();">
             氏名<input type ="text"></br>
-            金額<input type ="text">
+            金額<input type ="text"></br>
+            <input id="shot" type="button" onclick="shot()" value="shot"></input>
             <div class="overlay">　　　　　枠に合わせてください</div>
             <div class="camera_box">
                 <video autoplay playsinline></video>
@@ -32,6 +33,3 @@
     .overlay{ position:absolute; left:120px; top:180px;width:500px; height:1000px; z-index:999;border-style:dashed;border-width:medium;border-color:yellow;color:yellow;font-size: 28px;}
     </style>
 </html>
-
-
-
