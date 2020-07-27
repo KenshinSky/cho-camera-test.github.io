@@ -24,11 +24,17 @@ function openCamera() {
 }
 
 function shot(){
-    alert("1");
     var video = document.querySelector('video');
-    alert("2");
-    canvas.getContext("2d").drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
-    alert("3");
+    var canvas = canvas || document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+    alert("width" + canvas.width);
+    alert("height" + canvas.height);
+    context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, width, height);
+    alert("dramcanvas done")
+    var img = new Image();
+    img.src = canvas.toDataURL('image/png');
     var img = canvas.toDataURL("image/png");
     alert("done");
 }
