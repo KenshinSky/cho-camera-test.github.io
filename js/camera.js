@@ -34,8 +34,7 @@ function shot(){
         alert("video width:" + canvas.width + "\nvideo height:" + canvas.height);
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, width, height);
-        var img = new Image();
-        img.src = canvas.toDataURL('image/png');
+        var img = canvas.toDataURL('image/png');
         alert("img width:" + img.width + "\nimg height:" + img.height);
     }
     catch(err) {
