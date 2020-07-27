@@ -31,12 +31,12 @@ function shot(){
         var height = video.offsetHeight;
         canvas.width = width;
         canvas.height = height;
-        alert("video width:" + canvas.width + "</br>video height:" + canvas.height);
+        alert("video width:" + canvas.width + "\nvideo height:" + canvas.height);
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, width, height);
         var img = new Image();
         img.src = canvas.toDataURL('image/png');
-        alert("img width:" + img.width + "</br>img height:" + img.height);
+        alert("img width:" + img.width + "\nimg height:" + img.height);
     }
     catch(err) {
     alert(err.message);
