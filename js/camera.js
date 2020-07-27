@@ -35,8 +35,12 @@ function shot(){
         var context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, width, height);
         //var img = canvas.toDataURL('image/png');
-        var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
-        alert("img width:" + image.width + "\nimg height:" + image.height);
+        //var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+        //alert("img width:" + image.width + "\nimg height:" + image.height);
+        var link = document.getElementById('link');
+        link.setAttribute('download', 'test.png');
+        link.setAttribute('href', canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+        link.click();
     }
     catch(err) {
     alert(err.message);
